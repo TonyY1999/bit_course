@@ -1,7 +1,35 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-#include <stdio.h>
-#include <math.h>
+#include "hw.h"
 
+// 2022-10-31
+// 
+// 
+// Recursion to realize n to the power of k
+// 
+//int Pow(int n, int k) {
+//	if (k == 0)
+//	{
+//		return 1;
+//	}
+//
+//	return n * Pow(n, k - 1);
+//}
+//
+//int main() {
+//	int n, k;
+//	scanf("%d %d", &n, &k);
+//
+//	int res = Pow(n, k);
+//
+//	printf("%d to the power of %d is: %d", n, k, res);
+//
+//	return 0;
+//}
+// 
+// 
+// 
+// 
+// 
 // Swap 2 arrays with same size
 // 
 //void swap_arr(int arr1[], int arr2[], int sz) {
@@ -450,51 +478,105 @@
 // }
 
 
-//  2023-11-23
+// 2022-11-23
+// 
 // 
 // Input an integer array and implement a function 
 // to adjust the order of the numbers in the array 
 // so that all odd numbers in the array are in the first half of the array, 
 // and all even numbers are in the second half of the array.
 //
-void sort(int* arr, int sz) {
-	int left = 0;
-	int right = sz - 1;
+//void sort(int* arr, int sz) {
+//	int left = 0;
+//	int right = sz - 1;
+//
+//	while (left < right)
+//	{
+//		while (left < right && arr[left] % 2 == 1)
+//		{
+//			left++;
+//		}
+//
+//		while (left < right && arr[right] % 2 == 0)
+//		{
+//			right--;
+//		}
+//
+//		if (left < right)
+//		{
+//			int temp = arr[left];
+//			arr[left] = arr[right];
+//			arr[right] = temp;
+//
+//			left++;
+//			right--;
+//		}
+//	}
+//}
+//
+//int main() {
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//
+//	sort(arr, sz);
+//
+//	for (int i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//
+//	return 0;
+//}
 
-	while (left < right)
-	{
-		while (left < right && arr[left] % 2 == 1)
-		{
-			left++;
-		}
 
-		while (left < right && arr[right] % 2 == 0)
-		{
-			right--;
-		}
-
-		if (left < right)
-		{
-			int temp = arr[left];
-			arr[left] = arr[right];
-			arr[right] = temp;
-
-			left++;
-			right--;
-		}
-	}
-}
-
-int main() {
-	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-
-	sort(arr, sz);
-
-	for (int i = 0; i < sz; i++)
-	{
-		printf("%d ", arr[i]);
-	}
-
-	return 0;
-}
+// 2022-11-26
+// 
+// 
+// Strcpy implementation
+//
+//char* my_strcpy(char* des, const char* src) {
+//	char* res = des;
+//
+//	assert(des && src);
+//
+//	while (*res++ = *src++)
+//	{
+//		;
+//	}
+//
+//	return (des);
+//}
+//
+//int main() {
+//	char src[10] = "hello";
+//	char des[10];
+//
+//	printf("%s", my_strcpy(des, src));
+//
+//	return 0;
+//}
+//
+//
+// Strlen implementation
+//
+//int my_strlen(const char* str) {
+//	int count = 0;
+//
+//	assert(str != NULL);
+//
+//	while (*str)
+//	{
+//		count++;
+//		str++;
+//	}
+//
+//	return count;
+//}
+//
+//int main() {
+//	const char str[] = "hello";
+//	
+//	printf("len is %d", my_strlen(str));
+//
+//	return 0;
+//}
