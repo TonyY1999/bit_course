@@ -50,28 +50,54 @@
 // Get all the even and odd digits in an integer binary sequence 
 // and print out the binary sequence respectively
 //
-void print_bit(int n) {
-	printf("odd digits are: ");
-	for (int i = 31; i >= 1; i -= 2)
-	{
-		printf("%d ", (n >> i) & 1);
-	}
-	printf("\n");
+//void print_bit(int n) {
+//	printf("odd digits are: ");
+//	for (int i = 31; i >= 1; i -= 2)
+//	{
+//		printf("%d ", (n >> i) & 1);
+//	}
+//	printf("\n");
+//
+//	printf("even digits are: ");
+//	for (int i = 30; i >= 0; i -= 2)
+//	{
+//		printf("%d ", (n >> i) & 1);
+//	}
+//	printf("\n");
+//}
+//
+//int main() {
+//	int n;
+//	printf("Please enter a number: ");
+//	scanf("%d", &n);
+//
+//	print_bit(n);
+//
+//	return 0;
+//}
 
-	printf("even digits are: ");
-	for (int i = 30; i >= 0; i -= 2)
-	{
-		printf("%d ", (n >> i) & 1);
-	}
-	printf("\n");
-}
 
-int main() {
-	int n;
-	printf("Please enter a number: ");
-	scanf("%d", &n);
-
-	print_bit(n);
-
-	return 0;
-}
+// Find the number of different bits in two binary numbers
+// 
+//int calc_diff_bit(int n, int m) {
+//	int temp = n ^ m;
+//	int count = 0;
+//
+//	while (temp)
+//	{
+//		temp = temp & (temp - 1);
+//		count++;
+//	}
+//
+//	return count;
+//}
+//
+//int main() {
+//	int n, m;
+//	printf("Please enter 2 numbers u wanna compare: ");
+//	scanf("%d %d", &n, &m);
+//	
+//	printf("There are %d different bits in these 2 numbers.", calc_diff_bit(n, m));
+//
+//	return 0;
+//}
